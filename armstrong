@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+int num,p,i,r;
+printf("Enter a number");
+scanf("%d",&r);
+num=r;
+p=0;
+while(num>0)
+{
+i=num%10;
+p=p+i*i*i;
+num/=10;
+}
+if (r==p)
+{
+printf("num is armstrong");
+}
+else
+{
+printf("not a armstrong");
+}
+}
+
+
+
