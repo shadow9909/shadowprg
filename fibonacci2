@@ -1,0 +1,18 @@
+ #include<stdio.h>
+void main()
+{
+int n,n1,n2,nn,i;
+printf("enter a number");
+scanf("%d",&nn);
+i=nn;
+n1=0;
+n2=1;
+while (n1<=i)
+{
+printf("%d",n1);
+nn=n1+n2;
+n1=n2;
+n2=nn;
+
+}
+} 
