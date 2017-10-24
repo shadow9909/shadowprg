@@ -1,0 +1,23 @@
+
+#include<stdio.h>
+void main()
+{
+int n,i,pos,arr[100]
+printf("enter length of array\n");
+scanf("%d",&n);
+printf("position");
+scanf("%d",&pos);
+for(c=0;c<n;c++)
+{
+printf("val\n");
+scanf("%d",&arr[c]);
+}
+if(pos>n+1)
+printf("invalid");
+else
+{
+for(c=pos-1;c<n-1;c++)
+{
+arr[c]=arr[c+1]
+}
+}
