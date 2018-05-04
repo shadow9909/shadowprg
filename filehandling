@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+#include<fstream>
+int main()
+{
+ int i;
+ cout<<"enter no. of files"<<endl;
+ int n;
+ cin>>n;
+ char ch[30];
+ fstream file[n];
+ char a[n][20];
+ for(i=0;i<n;i++)
+ {
+  cin>>a[i];
+ }
+ for(i=0;i<n;i++)
+ {
+  file[i].open(a[i],ios::out);
+ }
+ for(i=0;i<n;i++)
+ {
+  cin>>ch;
+ file[i]<<ch; 
+ }
+ for(i=0;i<n;i++)
+ {
+  file[i].close();
+ }
+ for(i=0;i<n;i++)
+ {
+  file[i].open(a[i],ios::in);
+  
+ }
+ fstream merge;
+ merge.open("merge.txt",ios::out);
+ for(i=0;i<n;i++)
+ {
+  file[i]>>ch;
+  cout<<ch<<endl;
+  merge<<ch;
+  
+ }
+ merge.close();
+ for(i=0;i<n;i++)
+ {
+  file[i].close();
+ }
+ 
+ return 0;
+}
